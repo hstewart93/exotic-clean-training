@@ -8,3 +8,4 @@ colour-science
 torchvision
 torch==1.13
 optuna
+black
