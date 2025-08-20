@@ -99,7 +99,9 @@ def train_model(
 
         if (epoch + 1) % 10 == 0:
             print(
-                f"Epoch [{epoch+1}/{num_epochs}], Train Loss: {avg_train_loss:.6f}, Val Loss: {avg_val_loss:.6f}"
+                f"Epoch [{epoch+1}/{num_epochs}], "
+                f"Train Loss: {avg_train_loss:.6f}, "
+                f"Val Loss: {avg_val_loss:.6f}"
             )
 
     return {"loss": train_losses, "val_loss": val_losses}
@@ -130,7 +132,10 @@ parser.add_argument(
 args = parser.parse_args()
 
 ROOT_DIR = args.data_directory
-SAVE_DIR = f"save_{args.learning_rate}_{args.epochs}_{args.batch_size}_{datetime.now().replace(microsecond=0).isoformat()}"
+SAVE_DIR = (
+    f"save_{args.learning_rate}_{args.epochs}_{args.batch_size}_"
+    f"{datetime.now().replace(microsecond=0).isoformat()}"
+)
 os.makedirs(os.path.join(ROOT_DIR, SAVE_DIR), exist_ok=True)
 
 print(f"Root directory: {ROOT_DIR}")
