@@ -1,0 +1,10 @@
+jupyter
+matplotlib
+ipdb
+tqdm
+scikit-image
+scikit-learn
+colour-science
+torchvision
+torch==1.13
+optuna
