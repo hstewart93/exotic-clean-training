@@ -258,12 +258,12 @@ pre_process_image = PreprocessImage()
 
 # Load data
 data_train = np.load(os.path.join(ROOT_DIR, "clean_train.npy"))
-data_train = data_train[:800, :, :]
+data_train = data_train[:1600, :, :]
 data_validation = np.load(os.path.join(ROOT_DIR, "clean_validation.npy"))
-data_validation = data_validation[:100, :, :]
+data_validation = data_validation[:200, :, :]
 
 # Load order zeros
-order_zeros = np.load(os.path.join(ROOT_DIR, "contaminants.npy"))
+order_zeros = np.load(os.path.join(ROOT_DIR, "train_contaminants.npy"))
 
 print(f"Data train shape: {data_train.shape}")
 print(f"Data validation shape: {data_validation.shape}")
